@@ -25,7 +25,7 @@ Click fraud not only wastes financial resources but also skews data analytics. 3
 ### Impact
 
 Implementing this click fraud detection system can save millions in wasted ad spend for companies. By ensuring that each click is legitimate, advertisers can reallocate their budgets towards more effective marketing strategies and audience engagements.
-An end-to-end Machine elarning training and inference pipeline are developed for the click ad fraud detection system. 
+An end-to-end Machine lerning training and inference pipeline are developed for the click ad fraud detection system. 
 
 ## Project Structure
 

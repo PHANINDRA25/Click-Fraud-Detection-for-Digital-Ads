@@ -6,7 +6,9 @@ Companies market their products on social media through various pricing models s
 
 Click fraud occurs when these engagement metrics are artificially inflated by deceptive means. This type of fraud involves bots or automated scripts that simulate real user clicks on ads without any genuine interest or intention to engage with the content. These fraudulent clicks result in increased advertising costs for companies without providing any real engagement or return on investment.
 
-![](path)
+
+![clcik fraud github](https://github.com/user-attachments/assets/a2e2d949-f7f1-49d2-bab6-0fe3ec9e62f7)
+
 
 ### Recent Data (2024)
 
@@ -29,16 +31,20 @@ An end-to-end Machine elarning training and inference pipeline are developed for
 
 The click ad fraud detection system is designed with an end-to-end machine learning training and inference pipeline,  leveraging the capabilities of PySpark and Azure Databricks to manage and analyze large-scale data effectively following a modular approach. incorporating best practices in MLOps. This includes the utilization of MLflow for comprehensive experiment tracking, model versioning, and seamless model registration, ensuring a robust, scalable, and reproducible machine learning lifecycle.
 
-![image.png](path)
+![image (19)](https://github.com/user-attachments/assets/7f567d30-788d-4f9e-ba5c-6e78bd329fd3)
+
 
 ## Data Overview
 
-The dataset comprises approximately 3GB of data spanning 60 million observations, both training and testing, and is characterized by a high imbalance typical of rare events scenarios: 99.8% of the instances are non-fraudulent clicks (negative), while only 0.2% represent fraudulent clicks (positive). The dataset includes several features essential for analysis, such as IP address, app, device, operating system, channel, click time, attributed time, and the binary target variable 'is_attributed' which idnicates whether a click is legit or fraudulent.
+The dataset comprises approximately 3GB of data spanning 60 million observations, both training and testing, and is characterized by a high imbalance typical of rare events scenarios: 99.8% of the instances are non-fraudulent clicks (negative), while only 0.2% represent fraudulent clicks (positive). The dataset includes several features essential for analysis, such as IP address, app, device, operating system, channel, click time, attributed time, and the binary target variable 'is_attributed' which indicates whether a click is legit or fraudulent.
+
+![train data](https://github.com/user-attachments/assets/24cc625f-624c-40a1-ad7d-ee123cae513a)
+
 
 Tech stack used - Azure Databricks (for compute and model management), ADLS (data storage) , Pyspark (to handle big data)
 The entire data processing and model training pipeline are built using PySpark, due to its ability to efficiently process large datasets. Using pandas for such large-scale data operations is impractical due to its limitations with big data.
 
-![](path)
+
 
 ## Feature Engineering
 
@@ -62,6 +68,8 @@ Hourly Clicks per IP by App (nip_h_app): Quantifies how active an IP is on diffe
 
 Hourly Clicks per IP by Device (nip_h_dev): Tracks device-specific activities to detect anomalies in device usage patterns.
 
+![data with feature engg](https://github.com/user-attachments/assets/5ed2b1a4-0d77-437a-a0b0-a7a4aad44a1f)
+
 
 ## Model Training 
 
@@ -76,7 +84,8 @@ MLflow, LightGBM from SynapseML, and Hyperopt are used to handle large-scale dat
 
 **MLflow:** MLflow manages the entire ML lifecycle, tracking every model run's parameters and results, and facilitates model versioning and selection of the best model for production use.
 
-![](path)
+
+![model runs](https://github.com/user-attachments/assets/521abda1-ef87-4ffc-90db-eac6c693aa3d)
 
 
 ## Model Selection process & pushing to Production
@@ -85,8 +94,11 @@ After training, the top three models with the highest validation AUC were regist
 
 **_Note -_** Ideally, A/B testing of the three models could be conducted by exposing them to real-time traffic, allowing the best-performing model to be selected based on a combination of technical and business metrics. This approach is generally preferred for its real-world applicability. However, due to constraints on data availability, the current method involves evaluating the models against a holdout set. Additionally, unit tests can also be included to test the code quality.
 
-![image.png](path)
-![](path)
+![Databricks model results](https://github.com/user-attachments/assets/41512d27-3032-42dc-9563-0c31fa7bded5)
+
+
+![Model registry prod](https://github.com/user-attachments/assets/71790f37-738e-4271-9e3c-0777e7bcdcc8)
+
 
 ## INFERENCE Pipeline
 

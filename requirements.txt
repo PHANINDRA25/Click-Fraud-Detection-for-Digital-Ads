@@ -1,0 +1,8 @@
+lightgbm
+mlflow
+scikit-learn
+pandas
+pyyaml
+pytest
+mmlspark
+synapse.ml

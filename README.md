@@ -31,12 +31,14 @@ An end-to-end Machine lerning training and inference pipeline are developed for 
 
 The click ad fraud detection system is designed with an end-to-end machine learning training and inference pipeline,  leveraging the capabilities of PySpark and Azure Databricks to manage and analyze large-scale data effectively following a modular approach. incorporating best practices in MLOps. This includes the utilization of MLflow for comprehensive experiment tracking, model versioning, and seamless model registration, ensuring a robust, scalable, and reproducible machine learning lifecycle.
 
+
 ![image (19)](https://github.com/user-attachments/assets/7f567d30-788d-4f9e-ba5c-6e78bd329fd3)
 
 
 ## Data Overview
 
 The dataset comprises approximately 3GB of data spanning 60 million observations, both training and testing, and is characterized by a high imbalance typical of rare events scenarios: 99.8% of the instances are non-fraudulent clicks (negative), while only 0.2% represent fraudulent clicks (positive). The dataset includes several features essential for analysis, such as IP address, app, device, operating system, channel, click time, attributed time, and the binary target variable 'is_attributed' which indicates whether a click is legit or fraudulent.
+
 
 ![train data](https://github.com/user-attachments/assets/24cc625f-624c-40a1-ad7d-ee123cae513a)
 
@@ -58,15 +60,16 @@ Before building the model, it is crucial to develop a robust feature set, partic
 
 To quantify these behaviors, additional features were created.
 
-Hourly Clicks per IP by Day and Hour (nip_day_h): Counts the total clicks from an IP grouped by day and hour, helping identify sudden spikes in activity.
+**Hourly Clicks per IP by Day and Hour (nip_day_h):** Counts the total clicks from an IP grouped by day and hour, helping identify sudden spikes in activity.
 
-Hourly Clicks per IP by Channel (nip_h_chan): Provides insights into how frequently an IP interacts with specific channels within an hour.
+**Hourly Clicks per IP by Channel (nip_h_chan): **Provides insights into how frequently an IP interacts with specific channels within an hour.
 
-Hourly Clicks per IP by OS (nip_h_osr): Measures the concentration of clicks from a specific operating system, per IP, per hour.
+**Hourly Clicks per IP by OS (nip_h_osr):** Measures the concentration of clicks from a specific operating system, per IP, per hour.
 
-Hourly Clicks per IP by App (nip_h_app): Quantifies how active an IP is on different apps within the same hour.
+**Hourly Clicks per IP by App (nip_h_app):** Quantifies how active an IP is on different apps within the same hour.
 
-Hourly Clicks per IP by Device (nip_h_dev): Tracks device-specific activities to detect anomalies in device usage patterns.
+**Hourly Clicks per IP by Device (nip_h_dev):** Tracks device-specific activities to detect anomalies in device usage patterns.
+
 
 ![data with feature engg](https://github.com/user-attachments/assets/5ed2b1a4-0d77-437a-a0b0-a7a4aad44a1f)
 

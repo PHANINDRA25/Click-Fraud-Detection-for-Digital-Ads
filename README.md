@@ -113,5 +113,5 @@ The end-to-end workflow culminates with the application of the trained model to 
 The completed model can be deployed as a Fast API, enabling the capability for real-time predictions. This setup allows live traffic to flow directly to the Fast API, where it can instantly evaluate and score incoming data. Such a system provides timely insights into potential fraudulent activities, significantly enhancing the responsiveness of the fraud detection process
 
 
-
+Please read my article here - https://medium.com/@phanindraanagam/combating-click-fraud-leveraging-machine-learning-for-secure-digital-advertising-using-pyspark-c055efee640c
 
